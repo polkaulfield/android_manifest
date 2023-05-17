@@ -10,6 +10,10 @@
   <project path="device/xiaomi/davinci" name="android_device_xiaomi_davinci" remote="kenvyra" />
   <project path="vendor/xiaomi/davinci" name="android_vendor_xiaomi_davinci" remote="kenvyra-gitlab" />
 
+  <!-- sweet (Redmi Note 10 Pro) -->
+  <project path="device/xiaomi/sweet" name="android_device_xiaomi_sweet" remote="kenvyra" />
+  <project path="vendor/xiaomi/sweet" name="android_vendor_xiaomi_sweet" remote="kenvyra-gitlab" />
+
   <include name="manifests/snippets/devices/xiaomi.xml" />
 
 </manifest>
