@@ -4,9 +4,18 @@
   <remote name="xiaomi-sm8450-kernel"
           fetch="ssh://git@github.com/xiaomi-sm8450-kernel"
           revision="lineage-20" />
+  <remote name="kenvyra_clo_kernel_waipio"
+          fetch="ssh://git@github.com/Kenvyra"
+          revision="refs/heads/KERNEL.PLATFORM.1.0.r1-15100-kernel.0" />
+  <remote name="kenvyra_clo_vendor_waipio"
+          fetch="ssh://git@github.com/Kenvyra"
+          revision="refs/heads/LA.VENDOR.1.0.r1-21800-WAIPIO.QSSI13.0" />
+  <remote name="kenvyra_clo_video_waipio"
+          fetch="ssh://git@github.com/Kenvyra"
+          revision="refs/heads/VIDEO.LA.2.0.r1-08300-WAIPIO.0" />
 
   <project name="android_kernel_platform_build" path="kernel_platform/build" remote="xiaomi-sm8450-kernel"/>
-  <project name="android_kernel_platform_msm-kernel" path="kernel_platform/msm-kernel" remote="xiaomi-sm8450-kernel" revision="KERNEL.PLATFORM.1.0.r1-15100-kernel.0">
+  <project name="android_kernel_platform_msm-kernel" path="kernel_platform/msm-kernel" remote="kenvyra_clo_kernel_waipio">
     <linkfile dest="kernel_platform/common/build.config.msm.waipio" src="build.config.msm.waipio"/>
     <linkfile dest="kernel_platform/common/build.config.msm.waipio.tuivm" src="build.config.msm.waipio.tuivm"/>
     <linkfile dest="kernel_platform/common/build.config.msm.lahaina" src="build.config.msm.lahaina"/>
@@ -16,15 +25,15 @@
     <linkfile dest="kernel_platform/common/build.config.msm.zeus.tuivm" src="build.config.msm.zeus.tuivm"/>
   </project>
 
-  <project name="android_vendor_qcom_opensource_audio-kernel" path="vendor/qcom/opensource/audio-kernel" remote="xiaomi-sm8450-kernel" revision="LA.VENDOR.1.0.r1-21800-WAIPIO.QSSI13.0">
+  <project name="android_vendor_qcom_opensource_audio-kernel" path="vendor/qcom/opensource/audio-kernel" remote="kenvyra" revision="LA.VENDOR.1.0.r1-21800-WAIPIO.QSSI13.0">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/audio_kernel_vendor_board.mk" src="audio_kernel_vendor_board.mk"/>
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/audio_kernel_product_board.mk" src="audio_kernel_product_board.mk"/>
   </project>
-  <project name="android_vendor_qcom_opensource_camera-kernel" path="vendor/qcom/opensource/camera-kernel" remote="xiaomi-sm8450-kernel" revision="CAMERA.LA.2.0.r1-10200-WAIPIO.0">
+  <project name="android_vendor_qcom_opensource_camera-kernel" path="vendor/qcom/opensource/camera-kernel" remote="kenvyra" revision="CAMERA.LA.2.0.r1-10200-WAIPIO.0">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/camera-kernel_board.mk" src="board.mk"/>
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/camera-kernel_product.mk" src="product.mk"/>
   </project>
-  <project name="android_vendor_qcom_opensource_display-drivers" path="vendor/qcom/opensource/display-drivers" remote="xiaomi-sm8450-kernel" revision="DISPLAY.LA.2.0.r1-10700-WAIPIO.0">
+  <project name="android_vendor_qcom_opensource_display-drivers" path="vendor/qcom/opensource/display-drivers" remote="kenvyra" revision="DISPLAY.LA.2.0.r1-10700-WAIPIO.0">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/display_driver_product.mk" src="display_driver_product.mk"/>
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/display_driver_board.mk" src="display_driver_board.mk"/>
   </project>
@@ -48,13 +57,12 @@
           sync-tags="false"
           review="codelinaro.org"
           revision="refs/tags/KERNEL.PLATFORM.1.0.r1-15100-kernel.0" />
-  <project groups="qki" name="kernel/common" path="kernel_platform/common" remote="clo_kernel_waipio"/>
+  <project groups="qki" name="android_kernel_platform_common" path="kernel_platform/common" remote="kenvyra_clo_kernel_waipio"/>
   <project clone-depth="1" name="kernel/prebuilts/build-tools" path="kernel_platform/prebuilts/kernel-build-tools" remote="clo_kernel_waipio"/>
   <project name="kernel_platform/external/dtc" remote="clo_kernel_waipio"/>
   <project name="kernel_platform/kernel/prebuilts/mainline/arm64" remote="clo_kernel_waipio"/>
   <project clone-depth="1" name="kernel_platform/prebuilts/build-tools" remote="clo_kernel_waipio"/>
   <project name="kernel_platform/system/tools/mkbootimg" path="kernel_platform/tools/mkbootimg" remote="clo_kernel_waipio"/>
-  <project clone-depth="1" name="kernelplatform/prebuilts-master/clang/host/linux-x86" path="kernel_platform/prebuilts-master/clang/host/linux-x86" remote="clo_kernel_waipio"/>
   <project clone-depth="1" name="kernelplatform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" path="kernel_platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.17-4.8" remote="clo_kernel_waipio"/>
 
   <!-- Video manifest -->
@@ -70,7 +78,7 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/mmrm_kernel_product.mk" src="mmrm_kernel_product.mk"/>
   </project>
   <project groups="cyborg" name="platform/vendor/opensource/mmrm-driver-test" path="vendor/qcom/opensource/mmrm-driver/test" remote="clo_video_waipio"/>
-  <project groups="cyborg" name="platform/vendor/opensource/video-driver" path="vendor/qcom/opensource/video-driver" remote="clo_video_waipio">
+  <project groups="cyborg" name="android_vendor_qcom_opensource_video-driver" path="vendor/qcom/opensource/video-driver" remote="kenvyra_clo_video_waipio">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/video_kernel_product.mk" src="video_kernel_product.mk"/>
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/video_kernel_board.mk" src="video_kernel_board.mk"/>
   </project>
@@ -87,18 +95,18 @@
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/cvp_kernel_product.mk" src="cvp_kernel_product.mk"/>
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/cvp_kernel_board.mk" src="cvp_kernel_board.mk"/>
   </project>
-  <project name="platform/vendor/opensource/dataipa" path="vendor/qcom/opensource/dataipa" remote="clo_vendor_waipio">
+  <project name="android_vendor_qcom_opensource_dataipa" path="vendor/qcom/opensource/dataipa" remote="kenvyra_clo_vendor_waipio">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/dataipa_dlkm_vendor_board.mk" src="dataipa_dlkm_vendor_board.mk"/>
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/dataipa_dlkm_vendor_product.mk" src="dataipa_dlkm_vendor_product.mk"/>
   </project>
-  <project name="platform/vendor/opensource/eva-kernel" path="vendor/qcom/opensource/eva-kernel" remote="clo_vendor_waipio">
+  <project name="android_vendor_qcom_opensource_eva-kernel" path="vendor/qcom/opensource/eva-kernel" remote="kenvyra_clo_vendor_waipio">
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/eva_kernel_product.mk" src="eva_kernel_product.mk"/>
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/eva_kernel_board.mk" src="eva_kernel_board.mk"/>
   </project>
   <project name="platform/vendor/opensource/touch-drivers" path="vendor/qcom/opensource/touch-drivers" remote="clo_vendor_waipio"/>
   <project name="platform/vendor/qcom-opensource/wlan/fw-api" path="vendor/qcom/opensource/wlan/fw-api" remote="clo_vendor_waipio"/>
-  <project name="platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" remote="clo_vendor_waipio"/>
-  <project name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" remote="clo_vendor_waipio"/>
+  <project name="android_vendor_qcom_opensource_wlan_qca-wifi-host-cmn" path="vendor/qcom/opensource/wlan/qca-wifi-host-cmn" remote="kenvyra_clo_vendor_waipio"/>
+  <project name="android_vendor_qcom_opensource_wlan_qcacld-3.0" path="vendor/qcom/opensource/wlan/qcacld-3.0" remote="kenvyra_clo_vendor_waipio"/>
   <project name="platform/vendor/qcom/opensource/datarmnet" path="vendor/qcom/opensource/datarmnet" remote="clo_vendor_waipio">
     <linkfile dest="vendor/qcom/defs/board-defs/vendor/datarmnet_dlkm_vendor_board.mk" src="datarmnet_dlkm_vendor_board.mk"/>
     <linkfile dest="vendor/qcom/defs/product-defs/vendor/datarmnet_dlkm_vendor_product.mk" src="datarmnet_dlkm_vendor_product.mk"/>
