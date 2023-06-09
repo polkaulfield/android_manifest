@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- shared across all sm8350 devices -->
+  <project path="device/xiaomi/sm8350-common" name="android_device_xiaomi_sm8350-common" remote="kenvyra" />
+  <project path="kernel/xiaomi/sm8350" name="android_kernel_xiaomi_sm8350" remote="kenvyra" />
+  <project path="vendor/xiaomi/sm8350-common" name="android_vendor_xiaomi_sm8350-common" remote="kenvyra-gitlab" />
+
+  <!-- lisa (Xiaomi 11 Lite 5G NE) -->
+  <project path="device/xiaomi/lisa" name="android_device_xiaomi_lisa" remote="kenvyra" />
+  <project path="vendor/xiaomi/lisa" name="android_vendor_xiaomi_lisa" remote="kenvyra-gitlab" />
+
+  <include name="manifests/snippets/devices/xiaomi.xml" />
+
+</manifest>
