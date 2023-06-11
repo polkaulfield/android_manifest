@@ -39,7 +39,7 @@
   <project path="prebuilts/fdroid" name="android_prebuilts_fdroid" remote="kenvyra" />
   <project path="prebuilts/microg" name="android_prebuilts_microg" remote="kenvyra" />
   <project path="prebuilts/opencalc" name="android_prebuilts_opencalc" remote="kenvyra" />
-  <project path="prebuilts/rust/linux-x86/1.69.0" name="android_prebuilts_rust_linux-x86_1.69.0" groups="pdk" clone-depth="1" remote="kenvyra-gitlab" />
+  <project path="prebuilts/rust/linux-x86/1.72.0" name="android_prebuilts_rust_linux-x86_1.72.0" groups="pdk" clone-depth="1" remote="kenvyra-gitlab" />
 
   <!-- vendor -->
   <project path="vendor/extra/pixel-framework" name="android_vendor_extra_pixel-framework" remote="kenvyra" />
