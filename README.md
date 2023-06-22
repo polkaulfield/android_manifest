@@ -4,6 +4,10 @@ An open-source Android ROM project with performance in mind.
 
 Brought to you by the former DavinciCodeOS team.
 
+## Preparation
+
+Kenvyra uses SSH remotes, which means you will have to set up SSH access to GitHub and GitLab, please follow their documentation on how to do this: [GitHub](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account) and [GitLab](https://docs.gitlab.com/ee/user/ssh.html). You'll have to have connected to each of them once to have them in yours known hosts file, otherwise syncing the manifest will error.
+
 ## Building
 
 Building the ROM requires you to initialize the manifest first, like so:
