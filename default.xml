@@ -1065,7 +1065,7 @@
   <project path="system/memory/libmemunreachable" name="platform/system/memory/libmemunreachable" groups="pdk" remote="aosp" />
   <project path="system/memory/lmkd" name="LineageOS/android_system_memory_lmkd" groups="pdk" />
   <project path="system/netd" name="android_system_netd" groups="pdk" remote="kenvyra" />
-  <project path="system/nfc" name="platform/system/nfc" groups="pdk" remote="aosp" />
+  <project path="system/nfc" name="android_system_nfc" groups="pdk" remote="kenvyra" />
   <project path="system/nvram" name="platform/system/nvram" groups="pdk" remote="aosp" />
   <project path="system/security" name="android_system_security" groups="pdk" remote="kenvyra" />
   <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="kenvyra" />
