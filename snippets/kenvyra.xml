@@ -43,7 +43,8 @@
 
   <!-- vendor -->
   <project path="vendor/extra/pixel-framework" name="android_vendor_extra_pixel-framework" remote="kenvyra" />
-  <project path="vendor/gms" name="android_vendor_gms" remote="kenvyra-gitlab" />
+  <project path="vendor/google/gms" name="android_vendor_google_gms" remote="kenvyra-gitlab" />
+  <project path="vendor/google/pixel" name="android_vendor_google_pixel" remote="kenvyra-gitlab" />
   <project path="vendor/kenvyra" name="android_vendor_kenvyra" remote="kenvyra" />
   <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" groups="qcom,qssi" remote="kenvyra" />
 
