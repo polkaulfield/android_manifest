@@ -10,6 +10,10 @@
   <project path="device/xiaomi/lisa" name="android_device_xiaomi_lisa" remote="kenvyra" />
   <project path="vendor/xiaomi/lisa" name="android_vendor_xiaomi_lisa" remote="kenvyra-gitlab" />
 
+  <!-- haydn (Redmi K40 Pro/Pro+/Mi 11i/Mi 11X Pro) -->
+  <project path="device/xiaomi/haydn" name="android_device_xiaomi_haydn" remote="kenvyra" />
+  <project path="vendor/xiaomi/haydn" name="android_vendor_xiaomi_haydn" remote="kenvyra-gitlab" />
+
   <include name="manifests/snippets/devices/xiaomi.xml" />
 
 </manifest>
