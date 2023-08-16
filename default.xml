@@ -14,7 +14,22 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
-           revision="refs/tags/android-13.0.0_r61" />
+           revision="refs/tags/android-13.0.0_r67" />
+
+  <remote  name="kenvyra"
+           fetch="ssh://git@github.com/Kenvyra"
+           revision="refs/heads/kenvyra-13.0" />
+
+  <remote  name="kenvyra-gitlab"
+           fetch="ssh://git@gitlab.com/Kenvyra"
+           revision="refs/heads/kenvyra-13.0" />
+
+  <remote  name="caf"
+           fetch="git://codeaurora.org/quic/la" />
+
+  <remote  name="clo"
+           fetch="https://git.codelinaro.org/clo/la"
+           review="codelinaro.org" />
 
   <remote  name="kenvyra"
            fetch="ssh://git@github.com/Kenvyra"
@@ -36,7 +51,7 @@
            sync-c="true"
            sync-j="4" />
 
-  <superproject name="platform/superproject" remote="aosp" revision="android-13.0.0_r61" />
+  <superproject name="platform/superproject" remote="aosp" revision="android-13.0.0_r67" />
   <contactinfo bugurl="go/repo-bug" />
 
   <!-- AOSP Projects -->
